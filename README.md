@@ -6,7 +6,7 @@ Operate mysql database with python objects, this is based on kennethreitz/record
 ----------
 Operate your mysql database with python objects instead of sql strings, here are some examples:  
 
-**Select query**
+**Select data**
 
 
 <pre>
@@ -30,7 +30,6 @@ Operate your mysql database with python objects instead of sql strings, here are
 **Insert data**  
 
 <pre>
-    
     insert_content = {'eid': '79', 'requester': 'somebody', 'ticnum': 'NETWKTEST1234', 'Title': 'This is a test row'}
     sm.insert(table=table, content=insert_content)
     rs = sm.select(table=table, condition=condition, limit=10)
@@ -49,7 +48,6 @@ Operate your mysql database with python objects instead of sql strings, here are
 **Update data**  
 
 <pre>
-
     update_content = {'status': 'Finished'}
     update_condition = {'nid': '2584'}
     sm.update(table=table, content=update_content, condition=update_condition)
@@ -69,7 +67,6 @@ Operate your mysql database with python objects instead of sql strings, here are
 **Delete data**  
 
 <pre>
-
     delete_condition =  = {'nid': '2584'}
     sm.delete(table=table, condition=delete_condition)
     rs = sm.select(table=table, condition=condition, limit=10)
